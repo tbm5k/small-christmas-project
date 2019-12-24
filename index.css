@@ -1,0 +1,119 @@
+body{
+    font-family: SlateForOnePlusRegular,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    
+}
+
+h1{
+    padding-top: 5px;
+    font-family: SlateForOnePlusMedium,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.navbar{
+    background-image: url("images/christmas-decorations.jpg");
+    font-weight: bold;
+    background-position: center;
+}
+
+.banner{
+    background-image: url("images/santa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 450px;
+    background-position: center;
+}
+
+.box{
+    height: 450px;
+    margin: 0 auto;
+    padding:0 48px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.container{
+    background-color: #ffffff;
+    height: 600px;
+    text-align: center;
+}
+
+.bg-pic{
+    background-image: url("images/christmas-decorations.jpg");
+}
+
+.opac{
+    color: red;
+}
+
+.rem-ht{
+    min-height: 600px;
+    padding: 0;
+}
+
+.pic{
+    width: 360px;
+    height: 555px;
+    padding-top: 10px;
+}
+
+.nav-pic{
+    border-radius: 50%;
+}
+
+.banner-txt{
+    font-size: 34px;
+    font-weight: bold;
+    color: white;
+}
+
+.banner-msg{
+    color: #6e6e7a;
+}
+
+/*play button*/
+
+#button {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+  
+    border-color: transparent transparent transparent #202020;
+    transition: 100ms all ease;
+    cursor: pointer;
+  
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+    margin: 0 auto;
+}
+
+#button:hover {
+    border-color: transparent transparent transparent #404040;
+}
+
+/*media queries*/
+
+@media (min-width: 768px) {
+    .container{
+        height: 400px;
+        text-align: left;
+    }  
+
+    .banner{
+        height: 540px;
+        text-align: left;
+    }
+
+    .box{
+        height: 100%;
+        width: 960px;
+        padding:0 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

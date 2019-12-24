@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="icon/favicon.ico" type="image/x-icon">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Merry Christmas</title>
+</head>
+    <body id="body">
+        
+        <!-- Image and text -->
+        <nav class="navbar navbar-light bg-light shadow p-3 mb-0 bg-white">
+            <a class="navbar-brand text-danger" href="https://en.wikipedia.org/wiki/Christmas">
+            <img src="images/santadp.png" width="30" height="30" class="d-inline-block align-top nav-pic" alt="">
+            Merry Christmas
+            </a>
+        </nav>
+        <div class="banner">
+            <div class="box">
+                <p class="banner-txt">Merry Christmas</p>
+                <p class="banner-msg">It's christmas, merry christmas love, <br/>happy holiday</p>
+                <button id="button" onclick="func()"></button>
+            </div>
+        </div>
+        <div class="container overflow-hidden bg-pic">
+            <h1 style="color: red;">Hi You</h1>
+            <p class="opac">
+                Shi, the girl that drives me nuts, I want to wish you a merry Christmas. 
+                Who knew that on the Christmas of 2019 you would be mine? In my lifetime, 
+                I have never had a soulmate to wish a Merry Christmas. Having you to wish 
+                a Merry Christmas is so amazing, I love you so much you know. Once again bebe, 
+                Merry Christmas and a happy new year. I pray to God that he keeps you closer to 
+                me each and every day that we come to the time where we will be spending our 
+                Christmas holidays together, travelling places, road trips and much more. 
+                As you are with your fam, I wish you guys a nice holiday. Merry Christmas bebe, 
+                see you soon...
+            </p>
+        </div>
+        <div class="container rem-ht">
+            <img src="images/IMG-20191122-WA0013.jpg" class="pic" alt="...">
+            <img src="images/IMG-20191127-WA0101.jpg" class="pic" alt="...">
+            <img src="images/IMG-20191212-WA0032.jpg" class="pic" alt="...">
+        </div>
+
+        <!--
+        <iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+        -->
+        <audio id="myAudio" autoplay loop>
+            <source src="music/kids_christmas_song_silent_night_children_love_to_sing_kids_songs_mp3_81156.mp3" type="audio/mp3">
+        </audio>
+        <script>
+            var context;
+            window.onload = function(){
+                context = new AudioContext();
+            }
+
+            document.getElementById("button").addEventListener('click', function() {
+                context.resume().then(() => {
+                    document.getElementById("myAudio").play();
+                    console.log('Playback resumed successfully');
+                });
+            });
+            
+            function func(){
+                var el = document.getElementById("button");
+                el.parentNode.removeChild(el);
+            }
+        </script>
+    </body>
+</html>
